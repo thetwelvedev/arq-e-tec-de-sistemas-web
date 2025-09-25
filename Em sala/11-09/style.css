@@ -1,0 +1,148 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
+}
+
+nav{
+    background-color: rgb(0, 137, 216);
+    padding: 10px ; 
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h4 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h5 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h6 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto 20px auto;
+    text-align: justify;
+}
+
+.botao-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.botao-container a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: #3498db;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: 0.3s;
+    align-items: center;
+}
+
+.botao-container a:hover {
+    background-color: #2980b9;
+}
+
+/*Configurações da Div do modo dark e modo light*/
+.trilho{
+    width: 32px;
+    height: 18px;
+    background-color: lightgrey;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.trilho .indicador{
+    width: 18px;
+    height: 18px; 
+    background-color: grey;
+    border-radius: 50px;
+    transform: scale(0.9); /*Vai deixar o indicador menor tendo um borda em relação ao trilho*/
+    position: relative;
+    left: 0; /*Posiçaõ base do indicador*/
+    transition: .5s; /*Tempo de movimentação do indicador*/
+}
+
+.trilho.dark{
+    background-color: grey;
+}
+.trilho.dark .indicador{
+    left: 14px; /*Deslocamento do indicador*/
+    background-color: black;
+}
+
+body.dark{
+    background-color: black;
+}
+
+body.dark h1{
+    color: lightgrey;
+}
+
+body.dark h2{
+    color: lightgrey;
+}
+
+body.dark h3{
+    color: lightgrey;
+}
+
+body.dark h4{
+    color: lightgrey;
+}
+
+body.dark h5{
+    color: lightgrey;
+}
+
+body.dark h6{
+    color: lightgrey;
+}
+
+body.dark p{
+    color: lightgrey;
+}
+
+body.dark nav{
+    background-color: rgb(105, 105, 105);
+}
+
+body.dark .botao-container a {
+    background-color: #555;
+    color: white;         
+}
+
+body.dark .botao-container a:hover {
+    background-color: #777;
+}
