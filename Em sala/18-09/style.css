@@ -1,0 +1,92 @@
+p {
+    color: blue;
+    font-size: 16px;
+}
+h1 {
+    color: red;
+    font-weight: bold;
+}
+
+.destaque {
+    background-color: yellow;
+    padding: 10px;
+}
+.botao-secundario {
+    background-color: #007bff;
+    color: white;
+}
+
+#cabecalho { /*Não vai mudar nada pois não tá diretamente do h1*/
+    font-size: 24px;
+    text-align: center;
+    color: yellow;
+}
+
+#agora-vai {
+    font-size: 32px;
+    text-align: center;
+    color: blueviolet;
+}
+
+div p {
+font-weight: bold;
+}
+
+div > p { /*Altera somente os filhos diretos*/
+color: green;
+}
+
+h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 32px;
+    color: #333333;
+    text-align: center;
+    font-weight: bold;
+}
+
+/*p {
+    color: rgba(red, green, blue, alpha);
+} -> Cor usando RGB*/
+
+.caixa {
+    width: 300px;
+    height: 200px;
+    max-width: 100%;
+    min-height: 150px;
+}
+
+.artigo {
+    width: 800px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 0 auto;
+}
+.artigo h2 {
+    color: #2c3e50;
+    font-size: 28px;
+    text-align: center;
+}
+#autor {
+    font-style: italic;
+    color: #7f8c8d;
+}
+
+#botao-principal {
+    padding: 15px 30px;
+    background-color: blue;
+}
+
+.secao {
+    margin: 20px 0;
+    margin-top: 50px;
+}
+
+.card {
+    width: 300px; /* Largura do conteúdo */
+    height: 200px; /* Altura do conteúdo */
+    padding: 20px; /* Espaço interno */
+    border: 2px solid #ddd; /* Borda cinza */
+    margin: 30px auto; /* Margem externa */
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
