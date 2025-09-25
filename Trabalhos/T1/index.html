@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: rgb(135, 192, 241);
+        display: flex;
+        justify-content: center; /*Horizontal*/
+        align-items: center; /*Vertical*/
+        height: 100vh; /* ocupa a altura inteira da tela */
+        margin: 0;
+      }
+
+      #box {
+        width: 600px;
+        height: auto;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        padding: 50px;
+      }
+
+      h1 {
+        text-align: center;
+        padding-bottom: 20px;
+      }
+
+      label {
+        display: block; /*Trava a label encima do input*/
+        font-size: large;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      input {
+        width: 100%;
+        height: 35px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        outline: none; /*remove o contorno padrão*/
+      }
+
+      input:focus {
+        border: 1px solid blue;
+      }
+
+      button {
+        display: block;
+        margin: 10px auto; /*auto centraliza horizontalmente*/
+        text-decoration: none;
+        font-size: 18px;
+        color: white;
+        border: 1px solid #ccc;
+        background-color: blue;
+        padding: 15px 35px;
+        border-radius: 6px;
+        transition: 0.3s;
+      }
+
+      button:hover {
+        background-color: #2980b9;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box">
+      <h1>Cadastro de Jogador</h1>
+      <form action="" method="post">
+        <div>
+          <label for="nickname">Nickname:</label>
+          <input type="text" id="nickname" name="nickname" required />
+        </div>
+        <div>
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div>
+          <label for="senha">Senha:</label>
+          <input type="password" id="senha" name="senha" required />
+        </div>
+        <div>
+          <label for="confirmar-senha">Confirmar Senha:</label>
+          <input
+            type="password"
+            id="confirmar-senha"
+            name="confirmar-senha"
+            required
+          />
+        </div>
+        <div>
+          <button type="submit">Cadastrar</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
