@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body.geral {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background-color: #fafafa;
+  color: #333;
+  padding: 20px;
+}
+
+.cabecalho-navbar {
+  background-color: #222;
+  padding: 15px 0;
+  margin-bottom: 30px;
+}
+
+.navbar ul { 
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  list-style: none;
+}
+
+.navbar li {
+  color: #fff;
+  font-weight: bold;
+}
+
+.navbar a {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #fff;
+}
+
+.conteudo {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.posts h1.titulo {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.info-post {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.paragrafo p,
+.paragrafo-final p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  text-align: justify;
+}
+
+.secao-ingredientes,
+.secao-modo-de-preparo,
+.secao-montagem,
+.secao-comentario {
+  margin-bottom: 30px;
+}
+
+.secao-ingredientes h2,
+.secao-modo-de-preparo h2,
+.secao-montagem h2,
+.secao-comentario h2 {
+  font-size: 1.5rem;
+  color: #b22222;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #ffd700;
+  padding-bottom: 5px;
+}
+
+.secao-ingredientes ul,
+.secao-modo-de-preparo ol,
+.secao-montagem ol {
+  margin-left: 25px;
+  margin-top: 10px;
+  line-height: 1.8;
+}
+
+.secao-comentario input {
+  padding: 8px 12px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 60%;
+}
+
+.secao-comentario button {
+  padding: 8px 15px;
+  background-color: #b22222;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.secao-comentario button:hover {
+  background-color: #8b0000;
+}
+
+.rodape {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  background: #222;
+  color: #fff;
+  border-radius: 10px;
+}
+
+#imagem-da-pizza {
+  display: block;
+  margin: 20px auto; 
+  max-width: 100%;   
+  border-radius: 5px;
+}
+
+/* Lista de comentários - ponto extra */
+#lista-comentarios {
+  margin: 20px 0;
+  list-style: none;
+}
+
+#lista-comentarios li {
+  background-color: #f5f5f5;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border-left: 4px solid #b22222;
+}
+
+.secao-comentario form {
+  margin-top: 20px;
+}
+
+.secao-comentario input {
+  padding: 8px 12px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 60%;
+}
+
+.secao-comentario button {
+  padding: 8px 15px;
+  background-color: #b22222;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.secao-comentario button:hover {
+  background-color: #8b0000;
+} 

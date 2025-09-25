@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizza Pefeita</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="geral">
+    <header class="cabecalho-navbar">
+      <nav class="navbar">
+        <ul>
+          <li id="nome-empresa">Comando Culinário</li>
+          <!--Arrumar os links-->
+          <li><a href="#">Início</a></li>
+          <li><a href="#">Receitas</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="conteudo">
+      <article class="posts">
+        <header class="cabecalho-do-post">
+          <h1 class="titulo">
+            A Pizza Perfeita: Desvende os Segredos da Receita "Capitão Black"
+          </h1>
+          <div class="info-post">
+            <address>Por: Jean Bertrand</address>
+            |
+            <time datetime="2025-09-15"
+              >Publicado em: 15 de setembro de 2025</time
+            >
+            |
+            <span>No Blog: "Comando Culinário"</span>
+          </div>
+        </header>
+
+        <div class="paragrafo">
+          <p>
+            Você já se perguntou como criar aquela pizza perfeita, com uma massa
+            fofinha por dentro e crocante por fora, digna das melhores
+            pizzarias? Cansado de pedir delivery? Chegou a sua hora de dominar a
+            arte da pizza caseira.
+          </p>
+          <p>
+            A receita que vamos desvendar hoje é um segredo de família, batizada
+            de "Capitão Black" por seu criador, meu avô, um ex-cozinheiro da
+            marinha mercante. Ele passava horas testando massas e molhos, e me
+            ensinou que o verdadeiro segredo não está nos ingredientes caros,
+            mas na técnica e no amor pelo que se faz.
+          </p>
+        </div>
+
+        <section class="secao-ingredientes">
+          <h2>Ingredientes para a Massa (Rende 2 pizzas grandes)</h2>
+          <ul>
+            <li>
+              500g de farinha de trigo (de preferência, com alto teor de
+              proteína)
+            </li>
+            <li>300ml de água morna</li>
+            <li>10g de fermento biológico seco</li>
+            <li>10g de sal</li>
+            <li>10g de açúcar</li>
+            <li>30ml de azeite de oliva extra virgem</li>
+          </ul>
+        </section>
+
+        <section class="secao-modo-de-preparo">
+          <h2>Modo de Preparo da Massa</h2>
+          <ol>
+            <li>
+              Em uma tigela grande, misture a água morna, o fermento e o açúcar.
+              Deixe descansar por 5 a 10 minutos, até formar uma espuma na
+              superfície (prova do fermento).
+            </li>
+            <li>
+              Adicione o azeite, o sal e metade da farinha à mistura de
+              fermento. Mexa até obter uma massa pegajosa.
+            </li>
+            <li>
+              Acrescente o restante da farinha aos poucos, sovando a massa por
+              10 a 15 minutos até que fique lisa e elástica.
+            </li>
+            <li>
+              Modele em uma bola, coloque em uma tigela untada, cubra com pano
+              úmido e deixe descansar por 1 hora ou até dobrar de tamanho.
+            </li>
+          </ol>
+        </section>
+
+        <section class="secao-montagem">
+          <h2>Montagem e Assamento</h2>
+          <ol>
+            <li>
+              Divida a massa em duas partes e abra em formato redondo, deixando
+              as bordas mais altas.
+            </li>
+            <li>
+              Coloque em forma untada, adicione molho de tomate e os recheios.
+              Para a "Capitão Black": molho, mussarela, salame, azeitonas pretas
+              e orégano.
+            </li>
+            <li>
+              Asse em forno pré-aquecido a 250°C por 10 a 15 minutos até dourar
+              e borbulhar.
+            </li>
+            <li>
+              <strong>Dica Secreta do Capitão:</strong> pincele azeite nas
+              bordas antes de assar para deixá-las crocantes.
+            </li>
+          </ol>
+        </section>
+
+        <div class="paragrafo-final">
+          <img id="imagem-da-pizza" src="pizza.jpg" alt="Pizza" width="500" />
+          <p>
+            Agora você está pronto para impressionar a todos com uma pizza digna
+            de um chef de cozinha. O processo pode levar um tempo, mas a
+            satisfação de criar algo delicioso com as próprias mãos é
+            incomparável.
+          </p>
+          <p><em>Bom apetite e até a próxima missão culinária!</em></p>
+        </div>
+
+        <section class="secao-comentario">
+          <h2>Comentários</h2> 
+
+          <ul id="lista-comentarios"></ul>
+
+          <form id="form-comentario" action="#" method="post">
+            <label for="comentario">Deixe seu comentário:</label><br />
+            <input
+              type="text"
+              id="comentario"
+              name="comentario"
+              placeholder="Escreva aqui..."
+              required
+            />
+            <button type="submit">Enviar</button>
+          </form>
+        </section>
+      </article>
+    </main>
+
+    <footer class="rodape">
+      <p>&copy; 2025 Comando Culinário. Todos os direitos não reservados.</p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
