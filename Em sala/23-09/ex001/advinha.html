@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advinhe o Número</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-color: aqua;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 10px;
+            cursor: pointer;
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Jogo de Advinha o Número</h1>
+    <p>Clique no botão para começar e tente advinhar um número de 1 a 10</p>
+    <button onclick="iniciarJogo()">Iniciar</button>
+    <script>
+        function iniciarJogo(){
+            const numeroSecreto = Math.floor(Math.random()*10) + 1;
+            let tentativas = 0;
+            let advinhou = false;
+
+            while(!advinhou){
+                let chute = prompt("Advinhe um número de 1 a 10")
+                if(chute==null){
+                    alert("Jogo Cancelado");
+                    return;
+                }
+                if(isNaN(chute)){
+                    alert("Por favor digite um número válido");
+                    continue;
+                }
+                tentativas++;
+                if(chute==numeroSecreto){
+                    alert(`Parabéns! Você advinhou o número ${numeroSecreto} em ${tentativas} tentativas!`);
+                    advinhou = true;
+                } else{
+                    alert("Você errou o número e tente novamente");
+                }
+            }
+        }
+    </script>
+</body>
+</html>
