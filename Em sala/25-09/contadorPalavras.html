@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Palavras</title>
+    <style>
+        textarea {
+            width: 80%;
+            height: 100px;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        #resultado {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Contador de Palavras</h1>
+    <p>Digite uma frase na caixa de texto abaixo e veja quantas palavras ela tem:</p>
+    <textarea id="fraseInput" onkeyup="contarPalavras()"></textarea>
+    <p id="resultado"></p>
+    <script>
+        function contarPalavras() {
+            const frase = document.getElementById('fraseInput').value
+            const palavras = frase.trim().split(/\s+/)
+            const numeroDePalavras = (frase.trim()==='')?0:palavras.length
+            document.getElementById('resultado').innerText = `A frase tem ${numeroDePalavras} palavras.`
+        }
+    </script>
+
+</body>
+
+</html>
