@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem Morar Imóveis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h1>Bem Morar</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#vendas">Vendas</a></li>
+                <li><a href="#alugueis">Aluguéis</a></li>
+                <li><a href="#consultores">Consultores</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <h2>Encontre Seu Lar Ideal</h2>
+            <p>Milhares de imóveis para **venda** e **aluguel** em todo o país. Navegue por nossas categorias ou use a busca avançada.</p>
+            <div class="destaques">
+                <div class="destaque-item">
+                    <h3>Para Venda</h3>
+                    <p>Veja as últimas ofertas de casas, apartamentos e terrenos.</p>
+                    <a href="#vendas" class="btn">Ver Vendas</a>
+                </div>
+                <div class="destaque-item">
+                    <h3>Para Aluguel</h3>
+                    <p>Encontre o apartamento ou casa dos seus sonhos para alugar.</p>
+                    <a href="#alugueis" class="btn">Ver Aluguéis</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="contato-form">
+            <h2>Fale Conosco</h2>
+            <p>Preencha o formulário e um de nossos consultores entrará em contato em breve.</p>
+            <form id="meuFormulario">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone">
+
+                <label for="mensagem">Mensagem (Assunto de interesse):</label>
+                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+                <button type="submit" class="btn">Enviar Mensagem</button>
+            </form>
+            <p id="feedback"></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Bem Morar Imóveis. Todos os direitos reservados.</p>
+            <div class="social-media">
+                <a href="#" target="_blank">Facebook</a> | 
+                <a href="#" target="_blank">Instagram</a> | 
+                <a href="#" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
