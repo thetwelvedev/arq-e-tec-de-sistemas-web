@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* CSS BÁSICO PARA ESTILIZAR O BREADCRUMB */
+        .breadcrumb {
+            padding: 10px 15px;
+            list-style: none; /* Remove os marcadores de lista */
+            background-color: #f1f1f1;
+            margin-bottom: 20px;
+        }
+
+        .breadcrumb li {
+            display: inline; /* Coloca os itens lado a lado */
+            font-size: 16px;
+        }
+
+        .breadcrumb li+li:before {
+            padding: 8px;
+            color: black;
+            content: "/\00a0"; /* Adiciona o separador (barra) e um espaço */
+        }
+
+        .breadcrumb li a {
+            color: #0275d8;
+            text-decoration: none;
+        }
+
+        .breadcrumb li a:hover {
+            color: #01447e;
+            text-decoration: underline;
+        }
+        
+        /* Estiliza o último item (página atual) para não ser um link */
+        .breadcrumb li:last-child {
+            color: #555;
+        }
+
+        /* Estilos da página (opcional) */
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Início</a></li>
+                <li class="breadcrumb-item"><a href="/jogos/">Jogos</a></li>
+                <li class="breadcrumb-item"><a href="/jogos/rpg/">RPG</a></li>
+                <li class="breadcrumb-item" aria-current="page">Cyberpunk 2077</li>
+            </ol>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Detalhes do Jogo: Cyberpunk 2077</h1>
+        <p>Esta é a página final que o usuário está visualizando. O breadcrumb acima mostra o caminho percorrido desde a página inicial.</p>
+    </main>
+
+</body>
+</html>
+</html>

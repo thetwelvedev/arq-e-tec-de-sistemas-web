@@ -1,0 +1,41 @@
+/* CSS BÁSICO PARA ESTILIZAR O BREADCRUMB */
+.breadcrumb {
+    padding: 10px 15px;
+    list-style: none; /* Remove os marcadores de lista */
+    background-color: #f1f1f1;
+    margin-bottom: 20px;
+    }
+        .breadcrumb li {
+            display: inline; /* Coloca os itens lado a lado */
+            font-size: 16px;
+        }
+
+        .breadcrumb li+li:before {
+            padding: 8px;
+            color: black;
+            content: "/\00a0"; /* Adiciona o separador (barra) e um espaço */
+        }
+
+        .breadcrumb li a {
+            color: #0275d8;
+            text-decoration: none;
+        }
+
+        .breadcrumb li a:hover {
+            color: #01447e;
+            text-decoration: underline;
+        }
+        
+        /* Estiliza o último item (página atual) para não ser um link */
+        .breadcrumb li:last-child {
+            color: #555;
+        }
+
+        /* Estilos da página (opcional) */
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+        }

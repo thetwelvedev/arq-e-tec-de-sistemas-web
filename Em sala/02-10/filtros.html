@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtros Dinâmicos com JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+
+        /* Estilos da Área de Filtros */
+        .filtros {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .filtros button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .filtros button:hover {
+            background-color: #0056b3;
+        }
+        
+        .filtros button.active {
+            background-color: #004085;
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+        }
+
+        /* Estilos da Grade de Jogos */
+        .grade-jogos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .cartao-jogo {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            width: 250px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: opacity 0.3s, transform 0.3s;
+        }
+
+        /* CSS para Esconder/Mostrar Itens */
+        .cartao-jogo.hidden {
+            opacity: 0;
+            height: 0;
+            padding: 0;
+            border: none;
+            margin: 0;
+            overflow: hidden;
+            transform: scale(0.9);
+        }
+
+        .cartao-jogo h3 {
+            color: #333;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Minha Coleção de Jogos</h1>
+    </header>
+
+    <section class="filtros">
+        <button data-filter="all" class="active">Todos</button>
+        <button data-filter="rpg">RPG</button>
+        <button data-filter="aventura">Aventura</button>
+        <button data-filter="estrategia">Estratégia</button>
+    </section>
+
+    <section class="grade-jogos" id="grade-jogos">
+        <div class="cartao-jogo" data-category="rpg">
+            <h3>Cyberpunk 2077</h3>
+            <p>Gênero: RPG, Ficção Científica</p>
+        </div>
+        
+        <div class="cartao-jogo" data-category="estrategia">
+            <h3>StarCraft II</h3>
+            <p>Gênero: Estratégia em Tempo Real (RTS)</p>
+        </div>
+
+        <div class="cartao-jogo" data-category="aventura">
+            <h3>The Last of Us</h3>
+            <p>Gênero: Aventura, Sobrevivência</p>
+        </div>
+        
+        <div class="cartao-jogo" data-category="rpg">
+            <h3>Baldur's Gate 3</h3>
+            <p>Gênero: RPG, Fantasia</p>
+        </div>
+        
+        <div class="cartao-jogo" data-category="estrategia">
+            <h3>Age of Empires II</h3>
+            <p>Gênero: Estratégia, Histórico</p>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const botoesFiltro = document.querySelectorAll('.filtros button');
+            const cartoesJogos = document.querySelectorAll('.cartao-jogo');
+            
+            // Adiciona um listener de evento a cada botão de filtro
+            botoesFiltro.forEach(botao => {
+                botao.addEventListener('click', () => {
+                    // 1. Pega o filtro desejado (ex: 'rpg', 'all')
+                    const filtro = botao.dataset.filter;
+
+                    // 2. Remove a classe 'active' de todos os botões e adiciona ao botão clicado
+                    botoesFiltro.forEach(btn => btn.classList.remove('active'));
+                    botao.classList.add('active');
+
+                    // 3. Itera sobre cada cartão de jogo e aplica o filtro
+                    cartoesJogos.forEach(cartao => {
+                        const categoriaCartao = cartao.dataset.category;
+                        
+                        // Lógica principal do filtro
+                        if (filtro === 'all' || filtro === categoriaCartao) {
+                            // Se for 'all' OU a categoria do cartão coincidir com o filtro
+                            cartao.classList.remove('hidden');
+                        } else {
+                            // Se a categoria NÃO coincidir
+                            cartao.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

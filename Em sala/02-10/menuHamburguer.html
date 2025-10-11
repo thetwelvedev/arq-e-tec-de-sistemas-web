@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Hambúrguer Responsivo</title>
+    <style>
+        /* 1. ESTILOS GERAIS */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* 2. BARRA DE NAVEGAÇÃO */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        /* 3. ÍCONE DO HAMBÚRGUER (Aparece apenas em telas pequenas) */
+        .hamburger-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            display: none; /* Esconde por padrão em telas grandes */
+        }
+        
+        /* 4. LISTA DE LINKS */
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex; /* Links lado a lado em telas grandes */
+        }
+
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            display: block;
+        }
+        
+        /* 5. MEDIA QUERY (Onde o menu vira hambúrguer) */
+        @media (max-width: 768px) {
+            .nav-links {
+                /* Layout da lista quando a tela é pequena */
+                display: none; /* Esconde a lista de links por padrão */
+                width: 100%;
+                position: absolute;
+                top: 60px; /* Abaixo da navbar */
+                left: 0;
+                background-color: #444;
+                flex-direction: column; /* Links em coluna */
+                transition: all 0.3s ease;
+                z-index: 10;
+            }
+
+            .nav-links.active {
+                display: flex; /* Mostra a lista quando a classe 'active' é adicionada */
+            }
+
+            .hamburger-btn {
+                display: block; /* Mostra o botão hambúrguer */
+            }
+
+            .nav-links li a:hover {
+                background-color: #555;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">CAPITÃO BLACK GAMES</div>
+        
+        <button 
+            class="hamburger-btn" 
+            aria-label="Abrir menu de navegação" 
+            aria-expanded="false" 
+            aria-controls="menu-principal"
+        >
+            &#9776; </button>
+
+        <ul class="nav-links" id="menu-principal">
+            <li><a href="#home">Início</a></li>
+            <li><a href="#jogos">Meus Jogos</a></li>
+            <li><a href="#habilidades">Habilidades em Code</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+    
+    <main style="padding: 20px;">
+        <h2>Conteúdo da Página</h2>
+        <p>Redimensione a janela do navegador para ver o menu hambúrguer aparecer!</p>
+    </main>
+
+    <script>
+        const hamburgerBtn = document.querySelector('.hamburger-btn');
+        const navLinks = document.getElementById('menu-principal');
+
+        // Função que será chamada ao clicar no botão
+        hamburgerBtn.addEventListener('click', () => {
+            // Alterna a classe 'active' na lista de links
+            navLinks.classList.toggle('active');
+
+            // Lógica de Acessibilidade (ARÍA)
+            const isExpanded = navLinks.classList.contains('active');
+            hamburgerBtn.setAttribute('aria-expanded', isExpanded);
+        });
+    </script>
+
+</body>
+</html>
