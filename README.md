@@ -10,7 +10,12 @@
 ## Trabalhos Realizados:
 - [X] Trabalho 1 - 16/09 - Formalário usando HTML e CSS
 - [X] Trabalho 2 - 22/09 - Estilização do Blog Post
+
 ---
+## Provas Realizadas:
+- [X] Primeira Prova- 09/10 - Slide 1 ao 8
+---
+
 ## Ferramentas e linguagens utilizadas:
 <div>
     <img src="https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black&style=flat" alt="JavaScript">
