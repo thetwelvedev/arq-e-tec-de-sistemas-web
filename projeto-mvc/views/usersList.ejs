@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lista de Usuários (MVC)</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        background-color: #f4f4f4;
+      }
+      li {
+        background-color: white;
+        margin: 5px;
+        padding: 10px;
+        border-radius: 6px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>✅ Lista de Usuários (Feito com MVC!)</h1>
+    <ul>
+      <% usuarios.forEach(user => { %>
+        <li>
+          <strong>Nome:</strong> <%= user.nome %>
+          (<strong>Cargo:</strong> <%= user.cargo %>)
+        </li>
+      <% }); %>
+    </ul>
+  </body>
+</html>
