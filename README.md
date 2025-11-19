@@ -3,7 +3,7 @@
   arq-e-tec-de-sistemas-web
 </h1>
 
-## Programação Baixo Nível (2025.2) - Ciências da Computação
+## Arquitetura e Tecnologias de Sistemas Web (2025.2) - Ciências da Computação
 > Exercícios e trabalhos realizados na disciplina **Arquitetura e Tecnologias de Sistemas Web**.
 
 ---
